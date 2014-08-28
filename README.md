@@ -1,7 +1,7 @@
 VIM
 ========
 
-Minimal configuration of Vim with the next plugin
+Configuration of Vim with the next plugins:
 
   - vim-pathogen: plugin's management
   - lusty-explorer: file explorer
