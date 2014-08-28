@@ -1,0 +1,6 @@
+[submodule "vim/vim-pathogen"]
+	path = vim/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "vim/bundle/lustyexplorer"]
+	path = vim/bundle/lustyexplorer
+	url = https://github.com/sjbach/lusty.git
