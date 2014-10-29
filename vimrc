@@ -55,6 +55,10 @@ imap <right> <nop>
 "Auto install bundle
 execute pathogen#infect()
 
+"Session
+map <F2> :mksession! ~/vim_session <cr> "Quick write session with F2
+map <F3> :source ~/vim_session <cr>     "And load session with F3
+
 "Other
 set hidden          "hide files on openning
 command W w !sudo tee % >/dev/null
