@@ -1,0 +1,166 @@
+"Encoding
+set encoding=utf-8
+setglobal fileencoding=utf-8
+
+"Disable compatibility with VI
+set nocompatible
+
+"Syntax
+syntax enable
+filetype on
+filetype plugin on
+filetype indent on
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set list
+
+"Dispalying
+set title
+set number
+set ruler
+set wrap
+set scrolloff=3
+set listchars=tab:\|\ 
+
+"Search
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+"No beep
+"set visualbell
+set noerrorbells
+
+"Keybord
+set backspace=indent,eol,start
+map èè <Esc>
+imap èè <Esc>
+let mapleader = ","
+
+"Disable arrow
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+map :x <nop>
+imap :x <nop>
+
+"Enable mouse
+"set mouse=a
+
+"Auto install bundle
+execute pathogen#infect()
+
+"Session
+map <F2> :mksession! ~/vim_session <cr> "Quick write session with F2
+map <F3> :source ~/vim_session <cr>     "And load session with F3
+
+"Other
+set hidden          "hide files on openning
+map <C-C> I//<Esc>
+command W w !sudo tee % >/dev/null
+
+"Bépo
+
+" {W} -> [É]
+" ——————————
+" On remappe W sur É :
+noremap é w
+noremap É W
+" Corollaire: on remplace les text objects aw, aW, iw et iW
+" pour effacer/remplacer un mot quand on n’est pas au début (daé / laé).
+onoremap aé aw
+onoremap aÉ aW
+onoremap ié iw
+onoremap iÉ iW
+" Pour faciliter les manipulations de fenêtres, on utilise {W} comme un
+" Ctrl+W :
+noremap w <C-w>
+noremap W <C-w><C-w>
+
+" [HJKL] -> {CTSR}
+" ————————————————
+" {cr} = « gauche / droite »
+noremap c h
+noremap r l
+" {ts} = « haut / bas »
+noremap t j
+noremap s k
+" {CR} = « haut / bas de l'écran »
+noremap C H
+noremap R L
+" {TS} = « joindre / aide »
+noremap T J
+noremap S K
+
+noremap S K
+" Corollaire : repli suivant / précédent
+noremap zs zj
+noremap zt zk
+
+" {HJKL} <- [CTSR]
+" ————————————————
+" {J} = « Jusqu'à »            (j = suivant, J = précédant)
+noremap j t
+noremap J T
+" {L} = « Change »             (l = attend un mvt, L = jusqu'à la fin de ligne)
+noremap l c
+noremap L C
+" {H} = « Remplace »           (h = un caractère slt, H = reste en « Remplace »)
+noremap h r
+noremap H R
+" {K} = « Substitue »          (k = caractère, K = ligne)
+noremap k s
+noremap K S
+" Corollaire : correction orthographique
+noremap ]k ]s
+noremap [k [s
+
+" Désambiguation de {g}
+" —————————————————————
+" ligne écran précédente / suivante (à l'intérieur d'une phrase)
+noremap gs gk
+noremap gt gj
+" onglet précédant / suivant
+noremap gb gT
+noremap gé gt
+" optionnel : {gB} / {gÉ} pour aller au premier / dernier onglet
+noremap gB :exe "silent! tabfirst"<CR>
+noremap gÉ :exe "silent! tablast"<CR>
+" optionnel : {g"} pour aller au début de la ligne écran
+noremap g" g0
+
+" <> en direct
+" ————————————
+noremap « <
+noremap » >
+
+" Chiffres en accès direct
+" ————————————————————————
+noremap " 1
+noremap 1 "
+noremap « 2
+noremap 2 <
+noremap » 3
+noremap 3 >
+noremap ( 4
+noremap 4 (
+noremap ) 5
+noremap 5 )
+noremap @ 6
+noremap 6 @
+noremap + 7
+noremap 7 +
+noremap - 8
+noremap 8 -
+noremap / 9
+noremap 9 /
+noremap * 0
+noremap 0 *
+

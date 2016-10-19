@@ -61,4 +61,5 @@ map <F3> :source ~/vim_session <cr>     "And load session with F3
 
 "Other
 set hidden          "hide files on openning
+map <C-C> I//<Esc>
 command W w !sudo tee % >/dev/null
