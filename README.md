@@ -12,7 +12,7 @@ Installation
 
 ```sh
 -- Clone project
-git clone --recursive https://github.com/madef/vim.git /vim
+git clone --recursive https://github.com/madef/vim.git ./vim
 -- Remove old configuration
 cd ~
 mv .vim .vim.backup
