@@ -19,5 +19,7 @@ mv .vim .vim.backup
 mv .vimrc .vimrc.backup
 -- Add new configuration
 ln -s vim/vim .vim
+ln -s vim/vimrc.bepo .vimrc
+-- or if you use clasical keybord
 ln -s vim/vimrc .vimrc
 ```
