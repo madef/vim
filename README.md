@@ -30,3 +30,12 @@ Requirement
 LustyExplorer require ruby. Depend on your system, you will need to install an extra package like vim-ruby.
 
 On archlinux, if you want to install gvim, you will need to intall aur/gvim-gtk2 (yoaurt is your friend). 
+
+Other information
+-----------------
+
+On Archlinux, it had to install vim-git and enable ruby on PKGBUILD:
+
+```yay vim-git --editmenu```
+
+
